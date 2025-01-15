@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openinference_instrumentation_vertexai-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/openinference_instrumentation_vertexai-{{ version }}.tar.gz
   sha256: 05df65e5e947ae3f18b8eaa50ef7871ea958443bf003aee45efdf7f6a477a40a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<3.13
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.8,<3.13
+    - python >={{ python_min }},<3.13
     - opentelemetry-api
     - opentelemetry-instrumentation
     - opentelemetry-semantic-conventions
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Arize-ai/openinference
