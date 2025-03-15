@@ -1,5 +1,5 @@
 {% set name = "openinference-instrumentation-vertexai" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/openinference_instrumentation_vertexai-{{ version }}.tar.gz
-  sha256: 15b0ee2b2e48f14afb2eee9ae7b0a3346722a0b4fe2085815b693e1386d58998
+  sha256: 289da077bb72a1a2f97d1f8a260794025d6a75e1ce93b31dc8deef2683eb3663
 
 build:
   noarch: python
