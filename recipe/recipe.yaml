@@ -1,16 +1,16 @@
 schema_version: 1
 
 context:
-  name: openinference-instrumentation-vertexai
-  version: "0.1.24"
+  version: "0.1.40"
+  build_number: "0"
 
 package:
-  name: ${{ name|lower }}
+  name: openinference-instrumentation-vertexai
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/openinference_instrumentation_vertexai-${{ version }}.tar.gz
-  sha256: dafbe341279b32b316bf2caba885953b8ee7cfd7e4c243b52b598fdaa2ccfd74
+  url: https://files.pythonhosted.org/packages/source/o/openinference-instrumentation-vertexai/openinference_instrumentation_vertexai-${{ version }}.tar.gz
+  sha256: 3fea61ffd94060f394b510bbea77a167631c05a81fb61bbe5f173a660d248a8b
 
 build:
   number: 0
@@ -26,8 +26,8 @@ requirements:
     - python >=${{ python_min }}
     - opentelemetry-api
     - opentelemetry-instrumentation
-    - opentelemetry-semantic-conventions
-    - openinference-instrumentation >=0.1.7
+    - opentelemetry-semantic-conventions >=0.1.46
+    - openinference-instrumentation >=0.1.82
     - openinference-semantic-conventions
     - wrapt
 
